@@ -730,20 +730,29 @@
       #contact.contact{padding:24px 14px 32px!important;}
     }
 
-/* The learning by doing section uses softly rounded, warm olive cards */
-#experience.experience-card-section{display:block!important;background:transparent!important}
-#experience .journey-intro{max-width:760px;margin-bottom:30px}
-#experience .experience-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-#experience .experience-card{position:relative;min-width:0;background:rgba(248,239,213,.15);border:1px solid rgba(255,250,240,.12);border-radius:32px;padding:30px 34px;box-shadow:none;transition:background .25s ease,transform .25s ease}
-#experience .experience-card:hover{background:rgba(248,239,213,.22);transform:translateY(-3px)}
-#experience .experience-card-inner{position:relative}
-#experience .experience-date{font-family:inherit;font-weight:750;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#f1cadf;margin-bottom:14px}
-#experience .experience-card h3{font-size:clamp(20px,2.25vw,30px);line-height:1.16;margin:0 24px 10px 0;color:#fffaf0}
-#experience .experience-card .company{font-size:14px;font-weight:750;color:#f5d9e7;margin-bottom:12px}
-#experience .experience-card p{font-size:clamp(14px,1.3vw,17px);line-height:1.75;color:#fff8e8;margin:0;max-width:58ch}
-#experience .experience-flower{position:absolute;right:0;top:-5px;font-size:24px;color:#f4d6e2;opacity:.85}
-#experience .experience-card:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 9px);width:100%;justify-self:center}
-@media(max-width:720px){#experience .experience-card-grid{grid-template-columns:1fr;gap:14px}#experience .experience-card{padding:24px 23px;border-radius:25px}#experience .experience-card:last-child:nth-child(odd){grid-column:auto;max-width:none}#experience .experience-card h3{font-size:23px}}
+/* Softer reading surfaces for the original experience timeline.
+   The timeline, dates, dots, original layout, and curiosity illustration remain unchanged. */
+#experience .timeline{gap:12px!important}
+#experience .job,
+#experience .job:nth-of-type(2),
+#experience .job:nth-of-type(4){
+  background:rgba(255,250,240,.91)!important;
+  border:1px solid rgba(255,250,240,.55)!important;
+  border-radius:19px!important;
+  padding:18px 17px!important;
+  box-shadow:0 5px 16px rgba(37,35,20,.045)!important;
+  transition:background .25s ease,box-shadow .25s ease!important;
+}
+#experience .job:hover{
+  background:#fffaf0!important;
+  transform:none!important;
+  box-shadow:0 6px 16px rgba(37,35,20,.08)!important;
+}
+#experience .job h3{color:#3e3d2d!important}
+#experience .job .company{color:#754361!important}
+#experience .job time{color:#77546a!important}
+#experience .job p{color:#514a43!important}
+@media(max-width:640px){#experience .job{padding:16px 13px!important}}
 
 </style>
 </head>
@@ -941,51 +950,71 @@
       </div>
     </section>
 
-    <section id="experience" class="container section experience-layout experience-card-section">
- <div class="journey-intro"><h2 class="display">Learning by<br><em>doing.</em></h2><p class="section-copy">A little bit of research, a little bit of building, and a lot of learning along the way.</p></div>
- <div class="experience-card-grid"><article class="experience-card"><div class="experience-card-inner"><span class="experience-flower" aria-hidden="true">✳</span>
-          <div class="experience-date">May, Aug 2026</div>
+    <section id="experience" class="container section experience-layout">
+      <div class="journey-intro">
+        <h2 class="display">Learning by<br><em>doing.</em></h2>
+        <p class="section-copy">
+          From research labs to production systems and community leadership, each role has added something new to how I approach work.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="job">
+          <time>May, Aug<br>2026</time>
           <div>
             <h3>Application Management Business Analyst Intern</h3>
             <div class="company">First National Financial</div>
             <p>Supported application onboarding, Azure DevOps incident workflows, requirements, data validation, and AI model evaluation.</p>
           </div>
-        </div></article>
-<article class="experience-card"><div class="experience-card-inner"><span class="experience-flower" aria-hidden="true">✻</span>
-          <div class="experience-date">Mar, May 2026</div>
+        </article>
+        <article class="job">
+          <time>Mar, May<br>2026</time>
           <div>
             <h3>Machine Learning Research Assistant</h3>
             <div class="company">Toronto Metropolitan University</div>
             <p>Preprocessed and analyzed datasets, evaluated model results, and shared technical findings to support research.</p>
           </div>
-        </div></article>
-<article class="experience-card"><div class="experience-card-inner"><span class="experience-flower" aria-hidden="true">♡</span>
-          <div class="experience-date">2024, Present</div>
+        </article>
+        <article class="job">
+          <time>2024 –<br>Present</time>
           <div>
             <h3>Vice President &amp; Co Founder</h3>
             <div class="company">Black Students STEM Association</div>
             <p>Helped found the association and coordinate teams across partnerships, events, marketing, and operations.</p>
           </div>
-        </div></article>
-<article class="experience-card"><div class="experience-card-inner"><span class="experience-flower" aria-hidden="true">✿</span>
-          <div class="experience-date">2024, Present</div>
+        </article>
+        <article class="job">
+          <time>2024 –<br>Present</time>
           <div>
             <h3>Coding Instructor</h3>
             <div class="company">Code Ninjas</div>
             <p>Teach Python, JavaScript, and Unity fundamentals, adapting lessons to support a wide range of learners.</p>
           </div>
-        </div></article>
-<article class="experience-card"><div class="experience-card-inner"><span class="experience-flower" aria-hidden="true">✧</span>
-          <div class="experience-date">Jun, Aug 2023</div>
+        </article>
+        <article class="job">
+          <time>Jun, Aug<br>2023</time>
           <div>
             <h3>Research Mentorship Program</h3>
             <div class="company">Dalla Lana School of Public Health · University of Toronto</div>
             <p>Contributed to a guided by mentors case study exploring ways to reduce the effects of substance abuse in Toronto, drawing on graduate level materials and case studies.</p>
           </div>
-        </div></article></div>
-</section>
+        </article>
+      </div>
+      <aside class="journey-side" aria-label="The things that connect my journey">
+        <span class="orbit-label">the common thread</span>
+        <div class="orbit-art" aria-hidden="true">
+          <span class="orbit-ring ring-a"></span><span class="orbit-ring ring-b"></span>
+          <span class="orbit-center">curiosity<br><em>♡</em></span>
+          <span class="orbit-point point-a">⌘ <small>build</small></span>
+          <span class="orbit-point point-b">✳ <small>learn</small></span>
+          <span class="orbit-point point-c">✧ <small>connect</small></span>
+        </div>
+        <p>Different roles, same curiosity. I like figuring things out, making them better, and bringing people along.</p>
+      </aside>
+    </section>
 
-<section id="life" class="life section">
+    <section id="life" class="life section">
       <div class="container">
         <h2 class="display">There's more to me<br>than <em>work.</em></h2>
         <p class="bourdain-quote">“Move as much as you can, as far as you can.” <span>— Anthony Bourdain</span></p>
